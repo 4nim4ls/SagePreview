@@ -1,0 +1,4 @@
+LIBRARY "SageThumbnailProvider"
+EXPORTS
+    DllGetClassObject PRIVATE
+    DllCanUnloadNow PRIVATE

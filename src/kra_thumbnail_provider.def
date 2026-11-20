@@ -1,0 +1,4 @@
+LIBRARY "SageKraThumbnailProvider"
+EXPORTS
+    DllGetClassObject PRIVATE
+    DllCanUnloadNow PRIVATE

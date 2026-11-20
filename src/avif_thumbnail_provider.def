@@ -1,0 +1,4 @@
+LIBRARY "SageAvifThumbnailProvider"
+EXPORTS
+    DllGetClassObject PRIVATE
+    DllCanUnloadNow PRIVATE

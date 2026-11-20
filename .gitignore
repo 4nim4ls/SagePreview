@@ -1,0 +1,52 @@
+# Build output and generated installers (publish installers as GitHub Release assets)
+/out/
+/build/
+/dist/
+/x64/
+/Debug/
+/Release/
+/cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+CTestTestfile.cmake
+cmake_install.cmake
+Testing/
+_deps/
+
+# Visual Studio / IDE local state
+.vs/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.VC.db
+*.VC.opendb
+*.vcxproj
+*.vcxproj.filters
+*.sln
+*.slnx
+*.ipch
+
+# Compiled and intermediate binaries
+*.exe
+*.dll
+*.obj
+*.o
+*.pdb
+*.ilk
+*.lib
+*.exp
+*.idb
+*.pch
+*.tlog
+*.lastbuildstate
+
+# Logs, local caches and temporary files
+*.log
+*.tmp
+*.bak
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
