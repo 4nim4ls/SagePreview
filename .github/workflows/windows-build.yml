@@ -1,0 +1,32 @@
+# Verify Windows Release builds from public source. No code signing or deployment.
+name: Windows build and tests (unsigned)
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  windows-build:
+    runs-on: windows-2022
+    timeout-minutes: 45
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Build, test, stage portable release
+        shell: pwsh
+        run: .\tools\Build-Release.ps1
+
+      - name: Upload unsigned portable build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: SagePreview-win11-x64-UNSIGNED-CI
+          path: dist/SagePreview-1.0.0-win11-x64-portable.zip
+          if-no-files-found: error
+          retention-days: 7

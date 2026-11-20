@@ -72,3 +72,7 @@ SagePreview is released under the **MIT License** — Copyright (c) 2026 [4nim4l
 This project was developed with substantial help from **OpenAI's ChatGPT**, including C++ implementation, debugging, tests, and release tooling. The maintainer directed the project and validated it on Windows 11 with real artwork. SagePreview is an independent project, **not affiliated with or endorsed by OpenAI**, CELSYS, Adobe, Krita, or the original SageThumbs project.
 
 SagePreview is provided as-is, without a commitment to ongoing maintenance, support, or accepting pull requests. Fork it, adapt it, and use it however the MIT License permits. A GitHub star is appreciated if you find it useful.
+
+## Code signing policy
+
+SagePreview v1.0.0 is currently **unsigned**. We intend to apply for free open-source signing through SignPath Foundation, but no approval has been granted and no signed downloads are available yet. See the [code signing policy](CODE_SIGNING.md) for the current status, privacy statement, and release-approval process.
