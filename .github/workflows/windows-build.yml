@@ -17,14 +17,14 @@ jobs:
     timeout-minutes: 45
     steps:
       - name: Check out source
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Build, test, stage portable release
         shell: pwsh
         run: .\tools\Build-Release.ps1
 
       - name: Upload unsigned portable build artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: SagePreview-win11-x64-UNSIGNED-CI
           path: dist/SagePreview-1.0.0-win11-x64-portable.zip
