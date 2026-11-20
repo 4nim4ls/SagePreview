@@ -20,6 +20,9 @@ if ($LASTEXITCODE -eq 0) {
     Write-Host 'AVIF WIC decoding: available.'
 } elseif ($LASTEXITCODE -eq 77) {
     Write-Warning 'AVIF WIC decoding not available on this PC; document required optional Windows codecs.'
+    # Code 77 means the optional codec is absent, not that the release failed.
+    # GitHub Actions checks LASTEXITCODE after the PowerShell step finishes.
+    $global:LASTEXITCODE = 0
 } else {
     throw "AVIF codec check failed unexpectedly (exit $LASTEXITCODE)."
 }
